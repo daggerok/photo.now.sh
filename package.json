@@ -1,0 +1,44 @@
+{
+  "name": "photos.now.sh",
+  "version": "1.0.0",
+  "description": "Let's try keep this domain for site",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "now --public .vuepress/dist",
+    "start": "npm run serve",
+    "serve": "vuepress dev src",
+    "build": "vuepress build src --dest .vuepress/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daggerok/photos.now.sh.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daggerok/photos.now.sh/issues"
+  },
+  "homepage": "https://github.com/daggerok/photos.now.sh#readme",
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "1.0.0-alpha.0",
+    "@vuepress/plugin-blog": "1.0.0-alpha.0",
+    "@vuepress/plugin-last-updated": "1.0.0-alpha.0",
+    "@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
+    "vuepress": "0.14.8"
+  },
+  "builds": [
+    {
+      "src": ".vuepress/dist/index.html",
+      "use": "@now/static"
+    }
+  ],
+  "alias": [
+    "photos.now.sh"
+  ],
+  "public": true,
+  "github": {
+    "enabled": false,
+    "autoAlias": false
+  }
+}
