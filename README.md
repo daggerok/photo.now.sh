@@ -40,3 +40,16 @@ now alias set dist-bftlbaykbm.now.sh photos.now.sh
 this is multiline
 comment block
 -->
+
+- https://foto.now.sh
+- https://photos.now.sh
+- https://odessa.now.sh
+- https://fotos.now.sh",
+- https://photos.now.sh",
+- https://odessa.now.sh
+- https://valery.now.sh
+- https://valeria.now.sh
+- https://valeriya.now.sh
+- https://malenkaya.now.sh
+- https://littlevalery.now.sh
+- https://little-valery.now.sh

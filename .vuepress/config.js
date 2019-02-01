@@ -20,4 +20,5 @@ module.exports = {
   //   },
   // },
   // theme: 'casper',
+  base: process.env.NODE_ENV !== 'gh-pages' ? '/' : '/photos.now.sh/',
 };
