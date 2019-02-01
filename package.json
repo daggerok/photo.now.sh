@@ -4,10 +4,13 @@
   "description": "Let's try keep this domain for site",
   "main": "index.js",
   "scripts": {
-    "deploy": "now --public .vuepress/dist",
+    "clean": "rimraf .vuepress/dist",
+    "predeploy": "now rm -y photos.now.sh",
+    "deploy": "now --static --force --public --name=photos.now.sh deploy .vuepress/dist",
+    "postdeploy": "now alias photos.now.sh",
     "start": "npm run serve",
-    "serve": "vuepress dev src",
-    "build": "vuepress build src --dest .vuepress/dist"
+    "serve": "vuepress dev",
+    "build": "vuepress build"
   },
   "repository": {
     "type": "git",
@@ -25,20 +28,39 @@
     "@vuepress/plugin-blog": "1.0.0-alpha.0",
     "@vuepress/plugin-last-updated": "1.0.0-alpha.0",
     "@vuepress/plugin-medium-zoom": "1.0.0-alpha.0",
-    "vuepress": "0.14.8"
+    "@vuepress/plugin-pagination": "1.0.0-alpha.0",
+    "@vuepress/plugin-search": "1.0.0-alpha.0",
+    "rimraf": "2.6.3",
+    "vuepress": "0.14.8",
+    "vuepress-plugin-autonav": "0.1.2",
+    "vuepress-theme-casper": "1.0.2"
   },
-  "builds": [
-    {
-      "src": ".vuepress/dist/index.html",
-      "use": "@now/static"
+  "now": {
+    "version": "1.0.0-SNAPSHOT",
+    "name": "photos.now.sh",
+    "builds": [
+      {
+        "src": ".vuepress/dist/index.html",
+        "use": "@now/static"
+      }
+    ],
+    "alias": [
+      "photos",
+      "photos.now.sh"
+    ],
+    "static": {
+      "public": ".vuepress/dist",
+      "trailingSlash": false,
+      "renderSingle": true,
+      "unlisted": [
+        ".DS_Store",
+        ".git"
+      ]
+    },
+    "public": true,
+    "github": {
+      "enabled": false,
+      "autoAlias": false
     }
-  ],
-  "alias": [
-    "photos.now.sh"
-  ],
-  "public": true,
-  "github": {
-    "enabled": false,
-    "autoAlias": false
   }
 }

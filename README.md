@@ -1,4 +1,15 @@
-# photos.now.sh
+# Getting started
+Visit https://photos.now.sh/
+
+[[toc]]
+
+![An image](./image.png)
+
+<!--
+<<< @/other/README.md{2}
+-->
+
+#### photos.now.sh
 Let's try keep this domain for site
 
 _development_
