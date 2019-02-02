@@ -41,6 +41,7 @@ this is multiline
 comment block
 -->
 
+- https://val.now.sh
 - https://foto.now.sh
 - https://photos.now.sh
 - https://odessa.now.sh
